@@ -38,6 +38,12 @@ public class MoppyCOMBridge {
      * @param periodData length of period in microSeconds
      */
     public void sendEvent(byte pin, int periodData) {
+        int pinInt = (int) pin;
+
+        if(pinInt > 16) {
+            pin = (byte) (pinInt - 16);
+        }
+
         sendEvent(pin, (byte) ((periodData >> 8) & 0xFF), (byte) (periodData & 0xFF));
     }
 
