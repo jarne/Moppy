@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class MoppyCOMBridge {
 
     static int FIRST_PIN = 2;
-    static int MAX_PIN = 17;
+    static int MAX_PIN = 25;
     int SERIAL_RATE = 9600;
     OutputStream os;
     NRSerialPort com;

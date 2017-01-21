@@ -20,8 +20,8 @@ public class ReceiverMarshaller implements MoppyReceiver{
      * object can be assigned to multiple indexes if it is going to be handling multiple
      * channels of data.
      */
-    private final MoppyReceiver[] outputReceivers = new MoppyReceiver[16];
-    private final boolean[] receiverEnabled = new boolean[16];
+    private final MoppyReceiver[] outputReceivers = new MoppyReceiver[24];
+    private final boolean[] receiverEnabled = new boolean[24];
     
     /**
      * Creates a new ReceiverMarshaller with an empty array of {@link Receiver}s.
@@ -39,7 +39,7 @@ public class ReceiverMarshaller implements MoppyReceiver{
      * @param channelReceiver 
      */
     public void setReceiver(int MIDIChannel, MoppyReceiver channelReceiver){
-        if (MIDIChannel < 1 || MIDIChannel > 16){
+        if (MIDIChannel < 1 || MIDIChannel > 24){
             throw new IllegalArgumentException("Only channels 1-16 are supported by the ReceiverMarshaller!");
         }
         if (outputReceivers[MIDIChannel-1] != null){

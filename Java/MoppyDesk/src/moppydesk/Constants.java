@@ -29,5 +29,5 @@ public class Constants {
     public static final String PREF_FILTER_CONSTRAIN = "filterAutoConstrain";
     public static final String PREF_FILTER_IGNORETEN = "ignore10";
 
-    public static final int NUM_MIDI_CHANNELS = 16;
+    public static final int NUM_MIDI_CHANNELS = 24;
 }
