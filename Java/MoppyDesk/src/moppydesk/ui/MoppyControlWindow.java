@@ -66,8 +66,10 @@ public class MoppyControlWindow
     private void loadOutputSettings() {
         OutputSetting[] os = (OutputSetting[]) app.getPreferenceObject(Constants.PREF_OUTPUT_SETTINGS);
         if (os == null) {
-            for (int i = 1; i <= 16; i++) {
+            for (int i = 1; i <= 24; i++) {
                 outputSettings[i - 1] = new OutputSetting(i);
+
+                System.out.print(i);
             }
             app.putPreferenceObject(Constants.PREF_OUTPUT_SETTINGS, outputSettings);
         } else {
@@ -112,7 +114,7 @@ public class MoppyControlWindow
         mainStatusLabel.setToolTipText("Current status");
 
         mainInputPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        mainInputPanel.setPreferredSize(new java.awt.Dimension(350, 400));
+        mainInputPanel.setPreferredSize(new java.awt.Dimension(350, 700));
 
         inputSelectBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MIDI File", "MIDI IN Port", "Playlist" }));
         inputSelectBox.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +126,7 @@ public class MoppyControlWindow
         jLabel1.setText("Input Mode");
 
         mainOutputPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        mainOutputPanel.setPreferredSize(new java.awt.Dimension(350, 400));
+        mainOutputPanel.setPreferredSize(new java.awt.Dimension(350, 700));
         mainOutputPanel.setLayout(new javax.swing.BoxLayout(mainOutputPanel, javax.swing.BoxLayout.Y_AXIS));
 
         connectButton.setText("Connect");
@@ -271,7 +273,7 @@ public class MoppyControlWindow
         app.rm.clearReceivers();        
         outputPlayers.clear();
         
-        for (int ch = 1; ch <= 16; ch++) {
+        for (int ch = 1; ch <= 24; ch++) {
             OutputSetting os = outputSettings[ch-1]; //OutputSettings are 0-indexed
             if (os.enabled) {
                 // MoppyPlayer/Receivers are grouped by COM port

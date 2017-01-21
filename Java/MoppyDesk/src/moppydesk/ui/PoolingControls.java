@@ -137,21 +137,21 @@ public class PoolingControls extends javax.swing.JPanel {
 
         jLabel1.setText("Pool channels:");
 
-        inputStartSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 16, 1));
+        inputStartSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 24, 1));
         inputStartSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 poolingControlChanged(evt);
             }
         });
 
-        inputEndSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 16, 1));
+        inputEndSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 24, 1));
         inputEndSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 poolingControlChanged(evt);
             }
         });
 
-        outputStartSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 16, 1));
+        outputStartSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 24, 1));
         outputStartSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 poolingControlChanged(evt);
@@ -160,7 +160,7 @@ public class PoolingControls extends javax.swing.JPanel {
 
         jLabel2.setText("Into channels:");
 
-        outputEndSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 16, 1));
+        outputEndSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 24, 1));
         outputEndSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 poolingControlChanged(evt);

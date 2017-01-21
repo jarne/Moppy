@@ -40,6 +40,10 @@ public class MoppyCOMBridge {
     public void sendEvent(byte pin, int periodData) {
         int pinInt = (int) pin;
 
+        if(pinInt > 24) {
+            pin = (byte) (pinInt - 24);
+        }
+
         if(pinInt > 16) {
             pin = (byte) (pinInt - 16);
         }
