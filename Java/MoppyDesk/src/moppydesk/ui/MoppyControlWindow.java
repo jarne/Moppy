@@ -114,7 +114,7 @@ public class MoppyControlWindow
         mainStatusLabel.setToolTipText("Current status");
 
         mainInputPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        mainInputPanel.setPreferredSize(new java.awt.Dimension(350, 700));
+        mainInputPanel.setPreferredSize(new java.awt.Dimension(350, 600));
 
         inputSelectBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MIDI File", "MIDI IN Port", "Playlist" }));
         inputSelectBox.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +126,7 @@ public class MoppyControlWindow
         jLabel1.setText("Input Mode");
 
         mainOutputPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        mainOutputPanel.setPreferredSize(new java.awt.Dimension(350, 700));
+        mainOutputPanel.setPreferredSize(new java.awt.Dimension(350, 600));
         mainOutputPanel.setLayout(new javax.swing.BoxLayout(mainOutputPanel, javax.swing.BoxLayout.Y_AXIS));
 
         connectButton.setText("Connect");
